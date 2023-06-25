@@ -37,7 +37,7 @@ def main() -> None:
 def read_cvs(filename) -> list:
     table_row: list = []
 
-    with open(f'north_data/{filename}', 'r') as csv_file:
+    with open(f'north_data/{filename}', 'r', encoding='utf-8') as csv_file:
         csv_reader = csv.reader(csv_file)
         next(csv_reader)
         for row in csv_reader:
